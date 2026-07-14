@@ -163,4 +163,140 @@
             line-height: 1.6;
         }
 
-        .content ul li
+        .content ul li::before {
+            content: "—";
+            color: #1a4a2a;
+            position: absolute;
+            left: 0;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            padding: 40px 48px;
+            text-align: center;
+            border-top: 2px solid #1a4a2a;
+        }
+
+        .footer p {
+            color: #6a6a6a;
+            font-size: 14px;
+        }
+
+        .footer .emails {
+            color: #8a8a8a;
+            font-size: 13px;
+            margin-top: 8px;
+            display: block;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .footer-links a {
+            color: #8a8a8a;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                padding: 16px 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                justify-content: center;
+                gap: 16px;
+            }
+            .page-header {
+                padding: 50px 24px 40px;
+            }
+            .page-header h1 {
+                font-size: 34px;
+            }
+            .container {
+                padding: 40px 24px;
+            }
+            .content h2 {
+                font-size: 24px;
+            }
+            .footer {
+                padding: 30px 24px;
+            }
+            .footer-links {
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="MountainView Group">
+            <span class="logo-text">Mountain<span>View</span> Group</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="accounting.html">Accounting</a>
+            <a href="education.html">Education</a>
+            <a href="technologies.html" class="active">Technologies</a>
+            <a href="portal.html">Portal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <div class="page-header-inner">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / Technologies
+            </div>
+            <h1>MountainView <span>Technologies</span></h1>
+            <p>Innovative solutions for a modern business landscape.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Technology that works for you</h2>
+            <p>MountainView Technologies is the newest pillar of our group, dedicated to building innovative, practical tech solutions for businesses. We believe that technology should simplify operations, not complicate them — and we're here to make that happen.</p>
+
+            <h2>What we offer</h2>
+            <ul>
+                <li>Custom financial tools and dashboards</li>
+                <li>Operational systems for small and medium businesses</li>
+                <li>Tech consulting and implementation support</li>
+                <li>Data-driven insights for better decision-making</li>
+                <li>Scalable solutions that grow with your business</li>
+            </ul>
+
+            <h2>Built for the future</h2>
+            <p>Whether you're looking to automate your accounting processes, streamline your operations, or build a digital presence that works, MountainView Technologies is here to help you navigate the intersection of finance and code.</p>
+
+            <p>For inquiries, please reach out to us at <strong>nhlakanipho@mountainview.co.za</strong>.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 MountainView Group — Where finance meets purpose</p>
+        <span class="emails">admin@mountainview.co.za | nhlakanipho@mountainview.co.za | info@mountainview.co.za</span>
+        <div class="footer-links">
+            <a href="files/MountainView_Accounting_Terms&Conditions_2026_v01.pdf" target="_blank">Terms &amp; Conditions</a>
+            <a href="files/MountainView_Accounting_POPIA_policy_2026_v1(1).pdf" target="_blank">POPIA Policy</a>
+            <a href="portal.html">Client Portal</a>
+        </div>
+    </div>
+
+</body>
+</html>
