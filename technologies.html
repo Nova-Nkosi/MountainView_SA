@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MountainView Technologies — MountainView Group</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Georgia', serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        .navbar {
+            background: #1a1a1a;
+            padding: 20px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 2px solid #1a4a2a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+        }
+
+        .logo-text span {
+            color: #1a4a2a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #d0d0d0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 400;
+            transition: color 0.3s;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-links a.active {
+            color: #1a4a2a;
+        }
+
+        .page-header {
+            background: #f8f8f8;
+            padding: 80px 48px 60px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .page-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-header .breadcrumb {
+            color: #6a6a6a;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .page-header .breadcrumb a {
+            color: #1a4a2a;
+            text-decoration: none;
+        }
+
+        .page-header .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            font-weight: 300;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+
+        .page-header h1 span {
+            color: #1a4a2a;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: #5a5a5a;
+            max-width: 600px;
+            margin-top: 12px;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 48px;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin: 40px 0 16px;
+            letter-spacing: -0.3px;
+        }
+
+        .content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .content p {
+            font-size: 17px;
+            color: #2a2a2a;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .content ul {
+            margin: 16px 0 24px 24px;
+            list-style: none;
+        }
+
+        .content ul li {
+            font-size: 17px;
+            color: #2a2a2a;
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .content ul li
