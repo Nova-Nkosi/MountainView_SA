@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MountainView Group — Where finance meets purpose</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Georgia', serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        .navbar {
+            background: #1a1a1a;
+            padding: 20px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 2px solid #1a4a2a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+        }
+
+        .logo-text span {
+            color: #1a4a2a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #d0d0d0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 400;
+            transition: color 0.3s;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-links a.active {
+            color: #1a4a2a;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 26, 26, 0.92), rgba(26, 26, 26, 0.95)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%231a1a1a"/%3E%3Cpath d="M0 50 L100 50 M50 0 L50 100" stroke="%231a4a2a" stroke-width="0.5" opacity="0.1"/%3E%3C/svg%3E');
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 24px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-content .tag {
+            display: inline-block;
+            color: #1a4a2a;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .hero-content h1 span {
+            color: #1a4a2a;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .hero-line {
+            width: 60px;
+            height: 2px;
+            background: #1a4a2a;
+            margin: 30px auto 0;
+        }
+
+        .subsidiaries {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 48px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 64px;
+        }
+
+        .section-header .label {
+            color: #1a4a2a;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 300;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: #5a5a5a;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .sub-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .sub-card {
+            background: #ffffff;
+            padding: 48px 32px;
+            border-radius: 4px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.4s ease;
+        }
+
+        .sub-card:hover {
+            border-color: #1a4a2a;
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+        }
+
+        .sub-card .number {
+            font-size: 14px;
+            color: #1a4a2a;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .sub-card h3 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .sub-card p {
+            font-size: 15px;
+            color: #4a4a4a;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .sub-card a {
+            color: #1a4a2a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .sub-card a:hover {
+            border-bottom-color: #1a4a2a;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            padding: 40px 48px;
+            text-align: center;
+            border-top: 2px solid #1a4a2a;
+        }
+
+        .footer p {
+            color: #6a6a6a;
+            font-size: 14px;
+        }
+
+        .footer .emails {
+            color: #8a8a8a;
+            font-size: 13px;
+            margin-top: 8px;
+            display: block;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .footer-links a {
+            color: #8a8a8a;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 900px) {
+            .sub-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                padding: 16px 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                justify-content: center;
+                gap: 16px;
+            }
+            .hero-content h1 {
+                font-size: 38px;
+            }
+            .hero {
+                min-height: 60vh;
+                padding: 60px 20px;
+            }
+            .sub-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .subsidiaries {
+                padding: 60px 24px;
+            }
+            .section-header h2 {
+                font-size: 32px;
+            }
+            .footer {
+                padding: 30px 24px;
+            }
+            .footer-links {
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="MountainView Group">
+            <span class="logo-text">Mountain<span>View</span> Group</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="accounting.html">Accounting</a>
+            <a href="education.html">Education</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="portal.html">Portal</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <span class="tag">Est. 2024</span>
+            <h1>Where <span>finance</span> meets <span>purpose</span></h1>
+            <p>MountainView Group is a holding company built to serve small, boutique, and medium businesses through accounting, education, and technology.</p>
+            <div class="hero-line"></div>
+        </div>
+    </div>
+
+    <div class="subsidiaries">
+        <div class="section-header">
+            <span class="label">Our Portfolio</span>
+            <h2>Built to serve. Designed to last.</h2>
+            <p>Three subsidiaries, one mission: helping businesses thrive with clarity, capability, and care.</p>
+        </div>
+        <div class="sub-grid">
+            <div class="sub-card">
+                <span class="number">01</span>
+                <h3>MountainView Accounting</h3>
+                <p>Bookkeeping, accounting administration, and financial support for businesses that want to focus on what they do best.</p>
+                <a href="accounting.html">Explore →</a>
+            </div>
+            <div class="sub-card">
+                <span class="number">02</span>
+                <h3>MountainView Education</h3>
+                <p>Free accounting study material, notes, and live study sessions to make financial literacy accessible to everyone.</p>
+                <a href="education.html">Explore →</a>
+            </div>
+            <div class="sub-card">
+                <span class="number">03</span>
+                <h3>MountainView Technologies</h3>
+                <p>Innovative tech solutions for businesses — from financial tools to operational systems that work as hard as you do.</p>
+                <a href="technologies.html">Explore →</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 MountainView Group — Where finance meets purpose</p>
+        <span class="emails">admin@mountainview.co.za | nhlakanipho@mountainview.co.za | info@mountainview.co.za</span>
+        <div class="footer-links">
+            <a href="files/MountainView_Accounting_Terms&Conditions_2026_v01.pdf" target="_blank">Terms &amp; Conditions</a>
+            <a href="files/MountainView_Accounting_POPIA_policy_2026_v1(1).pdf" target="_blank">POPIA Policy</a>
+            <a href="portal.html">Client Portal</a>
+        </div>
+    </div>
+
+</body>
+</html>
